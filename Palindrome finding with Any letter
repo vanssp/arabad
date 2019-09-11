@@ -1,0 +1,33 @@
+def reverse(text):
+	return text[::-1]
+	
+def is_palindrome(text):
+	return text == reverse(text)
+	
+def compareLetters(text):
+	newWord = []
+	for letter in text:
+		newWord.append(letter)
+	return newWord
+
+def compareWords(text, ourList):
+	i = 0
+	z = 0
+	for letter in text:
+		if letter != ourList[i]:
+		 z= input('Isnt the \'{0}\' letter equal to \'{1}\' letter? \'1\' or \'0\''.format(letter, ourList[i]))
+		i += 1
+	if int(z) == 0:
+		print('its  a polindrome')
+	else:
+		print('it is not a polindrome')
+
+something = input('enter a word or a sentence ')
+
+compareWords(something, reverse(compareLetters(something)))
+
+#the old code just to find a simple polindrome with the right letter-sizes is downstaires
+'''if is_palindrome(something):
+ compareWords(something, reverse(compareLetters(something)))
+else:
+ print('it is not a palindrome')'''
