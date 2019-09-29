@@ -1,0 +1,13 @@
+class peopleInARoom:
+	def __init__(self, name):
+		self.name = name
+	def findingAs_hole(self):
+		while self.name != 'end':
+			self.name = input('input a name')
+			if self.name == "Soloviev":
+				print('{0} - prodajniy julik'.format(self.name))
+			else:
+				print('{0} is a normal guy'.format(self.name))
+						
+p = peopleInARoom(input('enter any combination of keys to start'))
+p.findingAs_hole()
